@@ -1,0 +1,20 @@
+
+syntax: glob
+
+syntax: regexp
+Makefile$
+Makefile\.in$
+Config\.h\.in$
+
+^\.Config/
+^\.M4/InitAutoMake.m4$
+^aclocal\.m4$
+^autom4te\.cache\/
+^configure$
+^docs$
+
+^Lib/.*/Tests/CMakeLists.txt
+^Lib/.*/Tests/Makefile.am
+
+subinclude:.M4/.hgignore
+
