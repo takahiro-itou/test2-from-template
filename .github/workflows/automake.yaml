@@ -1,0 +1,30 @@
+
+name: CI for Core
+
+on:
+  push:
+    branches: [ "master", "develop" ]
+  pull_request:
+    branches: [ "master", "develop" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Run bootstrap
+      run:  ./bootstrap.sh
+
+    - name: Run configrue
+      run:  ./configure
+
+    - name: Build
+      run:  make
+
+    - name: Run Test
+      run:  make check
+
+    - name: make distcheck
+      run:  make distcheck
