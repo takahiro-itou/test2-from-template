@@ -1,0 +1,44 @@
+﻿//  -*-  coding: utf-8-with-signature;  mode: c++  -*-  //
+/*************************************************************************
+**                                                                      **
+**                  ---  DocView Template Project  ---                  **
+**                                                                      **
+**          Copyright (C), 2017-2021, Takahiro Itou                     **
+**          All Rights Reserved.                                        **
+**                                                                      **
+**          License: (See COPYING or LICENSE files)                     **
+**          GNU Affero General Public License (AGPL) version 3,         **
+**          or (at your option) any later version.                      **
+**                                                                      **
+*************************************************************************/
+
+/**
+**      スクリプトによる設定値が書き込まれるヘッダファイル。
+**
+**      @file       .Config/ConfiguredSample.h.in
+**/
+
+#if !defined( SAMPLE_CONFIG_INCLUDED_CONFIGURED_SAMPLE_H )
+#    define   SAMPLE_CONFIG_INCLUDED_CONFIGURED_SAMPLE_H )
+
+//========================================================================
+//
+//    Name Space.
+//
+
+/**
+**    スクリプトによって設定された名前空間。
+**/
+
+#define     SAMPLE_CNF_NS               @SAMPLE_CNF_NAMESPACE@
+
+/**
+**    名前空間。
+**/
+
+#define     SAMPLE_NAMESPACE            SAMPLE_CNF_NS
+
+#define     SAMPLE_NAMESPACE_BEGIN      namespace  SAMPLE_CNF_NS  {
+#define     SAMPLE_NAMESPACE_END        }
+
+#endif
